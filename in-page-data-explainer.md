@@ -1,6 +1,7 @@
-
 # Schema.org Data for Media Explainer
+
 Author: beccahughes@chromium.org
+
 Last modified: 2020-01-29
 
 ## Objectives
@@ -28,37 +29,37 @@ If a site is playing videos then they can embed a [VideoObject](https://schema.o
 ```html
 <script type="application/ld+json">
 {
-  “@context“: “http://schema.org/“,
-  “@type“: “VideoObject“,
-  “@id“: “https://example.org/video“,
-  “author“: {
-    “@type“: “Person“,
-    “name“: “Test User“,
-    “url”: “https://example.org/testuser”
+  "@context": "http://schema.org/",
+  "@type": "VideoObject",
+  "@id": "https://example.org/video",
+  "author": {
+    "@type": "Person",
+    "name": "Test User",
+    "url": "https://example.org/testuser"
   },
-  “datePublished“: “2020-01-27“,
-  “description”: “This is a video that is about a bunny.”
-  “duration”: “PT5M49S”,
-  “genre”: “Animated Shorts”,
-  “interactionStatistic“: {
-    “@type": “InteractionCounter“,
-    “interactionType“: “http://schema.org/WatchAction“,
-    “userInteractionCount“: “4356“
+  "datePublished": "2020-01-27",
+  "description": "This is a video that is about a bunny."
+  "duration": "PT5M49S",
+  "genre": "Animated Shorts",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "http://schema.org/WatchAction",
+    "userInteractionCount": "4356"
   },
-  “isFamilyFriendly”: “http://schema.org/True”,
-  “mainEntityOfPage”: “https://example.org/video”,
-  “name“: “Big Buck Bunny“,
-  “potentialAction“: {
-    “@type“: “WatchAction“,
-    “actionStatus”: “http://schema.org/ActiveActionStatus”,
-    “startTime“: “00:00:10“,
-    “target”: “https://example.org/video?time=10s”
+  "isFamilyFriendly": "http://schema.org/True",
+  "mainEntityOfPage": "https://example.org/video",
+  "name": "Big Buck Bunny",
+  "potentialAction": {
+    "@type": "WatchAction",
+    "actionStatus": "http://schema.org/ActiveActionStatus",
+    "startTime": "00:00:10",
+    "target": "https://example.org/video?time=10s"
   },
-  “thumbnail”: {
-    “@type”: “ImageObject”,
-    “width”: 360,
-    “height”: 480,
-    “url”: “https://example.org/video_thumbnail.png”
+  "thumbnail": {
+    "@type": "ImageObject",
+    "width": 360,
+    "height": 480,
+    "url": "https://example.org/video_thumbnail.png"
   } 
 }
 </script>
@@ -73,35 +74,35 @@ If a site is playing a TV episode then they can embed a [TVEpisode](https://sche
 ```html
 <script type="application/ld+json">
 {
-  “@context“: “http://schema.org/“,
-  “@type“: “TVEpisode“,
-  “@id“: “https://example.org/tv-epsiode“,
-  “author“: {
-    “@type“: “Person“,
-    “name“: “Test User“,
-    “url”: “https://example.org/testuser”
+  "@context": "http://schema.org/",
+  "@type": "TVEpisode",
+  "@id": "https://example.org/tv-epsiode",
+  "author": {
+    "@type": "Person",
+    "name": "Test User",
+    "url": "https://example.org/testuser"
   },
-  “datePublished“: “2020-01-27“,
-  “description”: “This is some TV episode.”
-  “duration”: “PT5M49S”,
-  “episodeNumber”: 1,
-  “genre”: “Documentary”,
-  “partOfSeason”: {
-    “@type”: “TVSeason”,
-    “seasonNumber”: 1,
-    “partOfSeries”: {
-      “@type”: “TVSeries”,
-      “name”: “TV Series Name”,
-      “thumbnail”: {
-        “@type”: “ImageObject”,
-        “width”: 360,
-        “height”: 480,
-        “url”: “https://example.org/music_thumbnail.png”
+  "datePublished": "2020-01-27",
+  "description": "This is some TV episode."
+  "duration": "PT5M49S",
+  "episodeNumber": 1,
+  "genre": "Documentary",
+  "partOfSeason": {
+    "@type": "TVSeason",
+    "seasonNumber": 1,
+    "partOfSeries": {
+      "@type": "TVSeries",
+      "name": "TV Series Name",
+      "thumbnail": {
+        "@type": "ImageObject",
+        "width": 360,
+        "height": 480,
+        "url": "https://example.org/music_thumbnail.png"
       } 
     }
   },
-  “mainEntityOfPage”: “https://example.org/tv-episode”,
-  “name“: “Name of Episode“
+  "mainEntityOfPage": "https://example.org/tv-episode",
+  "name": "Name of Episode"
 }
 </script>
 ```
@@ -115,50 +116,50 @@ A site can also provide a TV episode to watch next by embedded the next episode 
 ```html
 <script type="application/ld+json">
 {
-  “@context“: “http://schema.org/“,
-  “@type“: “TVEpisode“,
-  “@id“: “https://example.org/tv-epsiode“,
-  “author“: {
-    “@type“: “Person“,
-    “name“: “Test User“,
-    “url”: “https://example.org/testuser”
+  "@context": "http://schema.org/",
+  "@type": "TVEpisode",
+  "@id": "https://example.org/tv-epsiode",
+  "author": {
+    "@type": "Person",
+    "name": "Test User",
+    "url": "https://example.org/testuser"
   },
-  “datePublished“: “2020-01-27“,
-  “description”: “This is some TV episode.”
-  “duration”: “PT5M49S”,
-  “episodeNumber”: 1,
-  “genre”: “Documentary”,
-  “partOfSeason”: {
-    “@type”: “TVSeason”,
-    “seasonNumber”: 1,
-    “episode”: {
-      “@type“: “TVEpisode“,
-      “@id“: “https://example.org/example-tv-series?e=2&s=1“,
-      “episodeNumber”: 2,
-      “potentialAction“: {
-        “@type“: “WatchAction“,
-        “actionStatus”: “http://schema.org/PendingActionStatus”
+  "datePublished": "2020-01-27",
+  "description": "This is some TV episode."
+  "duration": "PT5M49S",
+  "episodeNumber": 1,
+  "genre": "Documentary",
+  "partOfSeason": {
+    "@type": "TVSeason",
+    "seasonNumber": 1,
+    "episode": {
+      "@type": "TVEpisode",
+      "@id": "https://example.org/example-tv-series?e=2&s=1",
+      "episodeNumber": 2,
+      "potentialAction": {
+        "@type": "WatchAction",
+        "actionStatus": "http://schema.org/PendingActionStatus"
       },
-      “name“: “TV Episode 2 Name“
+      "name": "TV Episode 2 Name"
     },
-    “partOfSeries”: {
-      “@type”: “TVSeries”,
-      “name”: “TV Series Name”,
-      “thumbnail”: {
-        “@type”: “ImageObject”,
-        “width”: 360,
-        “height”: 480,
-        “url”: “https://example.org/music_thumbnail.png”
+    "partOfSeries": {
+      "@type": "TVSeries",
+      "name": "TV Series Name",
+      "thumbnail": {
+        "@type": "ImageObject",
+        "width": 360,
+        "height": 480,
+        "url": "https://example.org/music_thumbnail.png"
       } 
     }
   },
-  “mainEntityOfPage”: “https://example.org/tv-episode”,
-  “name“: “Name of Episode“,
-  “potentialAction“: {
-    “@type“: “WatchAction“,
-    “actionStatus”: “http://schema.org/ActiveActionStatus”,
-    “startTime“: “00:00:10“,
-    “target”: “https://example.org/video?time=10s”
+  "mainEntityOfPage": "https://example.org/tv-episode",
+  "name": "Name of Episode",
+  "potentialAction": {
+    "@type": "WatchAction",
+    "actionStatus": "http://schema.org/ActiveActionStatus",
+    "startTime": "00:00:10",
+    "target": "https://example.org/video?time=10s"
   }
 }
 </script>
@@ -169,55 +170,55 @@ A site can also provide the first episode of the next season and the user agent 
 ```html
 <script type="application/ld+json">
 {
-  “@context“: “http://schema.org/“,
-  “@type“: “TVEpisode“,
-  “@id“: “https://example.org/tv-epsiode“,
-  “author“: {
-    “@type“: “Person“,
-    “name“: “Test User“,
-    “url”: “https://example.org/testuser”
+  "@context": "http://schema.org/",
+  "@type": "TVEpisode",
+  "@id": "https://example.org/tv-epsiode",
+  "author": {
+    "@type": "Person",
+    "name": "Test User",
+    "url": "https://example.org/testuser"
   },
-  “datePublished“: “2020-01-27“,
-  “description”: “This is some TV episode.”
-  “duration”: “PT5M49S”,
-  “episodeNumber”: 10,
-  “genre”: “Documentary”,
-  “partOfSeason”: {
-    “@type”: “TVSeason”,
-    “seasonNumber”: 1,
-    “numberOfEpisodes”: 10,
-    “partOfSeries”: {
-      “@type”: “TVSeries”,
-      “containsSeason”: {
-       “@type”: “TVSeason”,
-       “seasonNumber”: 2,
-       “episode”: {
-         “@type“: “TVEpisode“,
-         “@id“: “https://example.org/example-tv-series?e=1&s=2“,
-         “episodeNumber”: 1,
-         “potentialAction“: {
-           “@type“: “WatchAction“,
-           “actionStatus”: “http://schema.org/PendingActionStatus”
+  "datePublished": "2020-01-27",
+  "description": "This is some TV episode."
+  "duration": "PT5M49S",
+  "episodeNumber": 10,
+  "genre": "Documentary",
+  "partOfSeason": {
+    "@type": "TVSeason",
+    "seasonNumber": 1,
+    "numberOfEpisodes": 10,
+    "partOfSeries": {
+      "@type": "TVSeries",
+      "containsSeason": {
+       "@type": "TVSeason",
+       "seasonNumber": 2,
+       "episode": {
+         "@type": "TVEpisode",
+         "@id": "https://example.org/example-tv-series?e=1&s=2",
+         "episodeNumber": 1,
+         "potentialAction": {
+           "@type": "WatchAction",
+           "actionStatus": "http://schema.org/PendingActionStatus"
          },
-         “name“: “TV Episode 1 Name“
+         "name": "TV Episode 1 Name"
         },
       },
-      “name”: “TV Series Name”,
-      “thumbnail”: {
-        “@type”: “ImageObject”,
-        “width”: 360,
-        “height”: 480,
-        “url”: “https://example.org/music_thumbnail.png”
+      "name": "TV Series Name",
+      "thumbnail": {
+        "@type": "ImageObject",
+        "width": 360,
+        "height": 480,
+        "url": "https://example.org/music_thumbnail.png"
       } 
     }
   },
-  “mainEntityOfPage”: “https://example.org/tv-episode”,
-  “name“: “Name of Episode“,
-  “potentialAction“: {
-    “@type“: “WatchAction“,
-    “actionStatus”: “http://schema.org/ActiveActionStatus”,
-    “startTime“: “00:00:10“,
-    “target”: “https://example.org/video?time=10s”
+  "mainEntityOfPage": "https://example.org/tv-episode",
+  "name": "Name of Episode",
+  "potentialAction": {
+    "@type": "WatchAction",
+    "actionStatus": "http://schema.org/ActiveActionStatus",
+    "startTime": "00:00:10",
+    "target": "https://example.org/video?time=10s"
   }
 }
 </script>
@@ -230,37 +231,37 @@ If a site is playing a live video stream they can add a [BroadcastEvent](https:/
 ```html
 <script type="application/ld+json">
 {
-  “@context“: “http://schema.org/“,
-  “@type“: “VideoObject“,
-  “@id“: “https://example.org/video“,
-  “author“: {
-    “@type“: “Person“,
-    “name“: “Test User“,
-    “url”: “https://example.org/testuser”
+  "@context": "http://schema.org/",
+  "@type": "VideoObject",
+  "@id": "https://example.org/video",
+  "author": {
+    "@type": "Person",
+    "name": "Test User",
+    "url": "https://example.org/testuser"
   },
-  “datePublished“: “2020-01-27“,
-  “description”: “This is a video that is about a bunny.”
-  “duration”: “PT5M49S”,
-  “genre”: “Animated Shorts”,
-  “interactionStatistic“: {
-    “@type": “InteractionCounter“,
-    “interactionType“: “http://schema.org/WatchAction“,
-    “userInteractionCount“: “4356“
+  "datePublished": "2020-01-27",
+  "description": "This is a video that is about a bunny."
+  "duration": "PT5M49S",
+  "genre": "Animated Shorts",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "http://schema.org/WatchAction",
+    "userInteractionCount": "4356"
   },
-  “isFamilyFriendly”: “http://schema.org/True”,
-  “mainEntityOfPage”: “https://example.org/video”,
-  “name“: “Big Buck Bunny“,
-  “publication“: {
-    “@type": “BroadcastEvent“,
-    “isLiveBroadcast“: “http://schema.org/True“,
-    “startDate“: “2020-01-28T06:00:00+0000“,
-    “endDate“: “2020-01-28T07:00:00+0000“
+  "isFamilyFriendly": "http://schema.org/True",
+  "mainEntityOfPage": "https://example.org/video",
+  "name": "Big Buck Bunny",
+  "publication": {
+    "@type": "BroadcastEvent",
+    "isLiveBroadcast": "http://schema.org/True",
+    "startDate": "2020-01-28T06:00:00+0000",
+    "endDate": "2020-01-28T07:00:00+0000"
   },
-  “thumbnail”: {
-    “@type”: “ImageObject”,
-    “width”: 360,
-    “height”: 480,
-    “url”: “https://example.org/video_thumbnail.png”
+  "thumbnail": {
+    "@type": "ImageObject",
+    "width": 360,
+    "height": 480,
+    "url": "https://example.org/video_thumbnail.png"
   } 
 }
 </script>
@@ -273,26 +274,26 @@ If a site is playing movies then they can embed a [Movie](https://schema.org/Mov
 ```html
 <script type="application/ld+json">
 {
-  “@context“: “http://schema.org/“,
-  “@type“: “Movie“,
-  “@id“: “https://example.org/dream“,
-  “contentRating”: {
-    “@type”: “Rating”,
-    “author”: “MPAA”,
-    “ratingValue”: “PG-13”
+  "@context": "http://schema.org/",
+  "@type": "Movie",
+  "@id": "https://example.org/dream",
+  "contentRating": {
+    "@type": "Rating",
+    "author": "MPAA",
+    "ratingValue": "PG-13"
   }
-  “datePublished“: “2020-01-27“,
-  “description”: “This is a movie about a dream.”
-  “duration”: “PT5M49S”,
-  “genre”: “Animated”,
-  “isFamilyFriendly”: “http://schema.org/True”,
-  “mainEntityOfPage”: “https://example.org/dream”,
-  “name“: “Dream“,
-  “thumbnail”: {
-    “@type”: “ImageObject”,
-    “width”: 360,
-    “height”: 480,
-    “url”: “https://example.org/movie_thumbnail.png”,
+  "datePublished": "2020-01-27",
+  "description": "This is a movie about a dream."
+  "duration": "PT5M49S",
+  "genre": "Animated",
+  "isFamilyFriendly": "http://schema.org/True",
+  "mainEntityOfPage": "https://example.org/dream",
+  "name": "Dream",
+  "thumbnail": {
+    "@type": "ImageObject",
+    "width": 360,
+    "height": 480,
+    "url": "https://example.org/movie_thumbnail.png",
   } 
 }
 </script>
@@ -305,26 +306,26 @@ If a site is playing audio content then they can embed an [AudioObject](https://
 ```html
 <script type="application/ld+json">
 {
-  “@context“: “http://schema.org/“,
-  “@type“: “AudioObject“,
-  “@id“: “https://example.org/audio“,
-  “author“: {
-    “@type“: “Person“,
-    “name“: “Test User“,
-    “url”: “https://example.org/testuser”
+  "@context": "http://schema.org/",
+  "@type": "AudioObject",
+  "@id": "https://example.org/audio",
+  "author": {
+    "@type": "Person",
+    "name": "Test User",
+    "url": "https://example.org/testuser"
   },
-  “datePublished“: “2020-01-27“,
-  “description”: “This is some audio.”
-  “duration”: “PT5M49S”,
-  “genre”: “Pop”,
-  “isFamilyFriendly”: “http://schema.org/True”,
-  “mainEntityOfPage”: “https://example.org/audio”,
-  “name“: “Test Pop“,
-  “thumbnail”: {
-    “@type”: “ImageObject”,
-    “width”: 360,
-    “height”: 480,
-    “url”: “https://example.org/music_thumbnail.png”
+  "datePublished": "2020-01-27",
+  "description": "This is some audio."
+  "duration": "PT5M49S",
+  "genre": "Pop",
+  "isFamilyFriendly": "http://schema.org/True",
+  "mainEntityOfPage": "https://example.org/audio",
+  "name": "Test Pop",
+  "thumbnail": {
+    "@type": "ImageObject",
+    "width": 360,
+    "height": 480,
+    "url": "https://example.org/music_thumbnail.png"
   } 
 }
 </script>
@@ -337,37 +338,37 @@ If a site is playing music then they can embed a [MusicRecording](https://schema
 ```html
 <script type="application/ld+json">
 {
-  “@context“: “http://schema.org/“,
-  “@type“: “MusicRecording“,
-  “@id“: “https://example.org/music-recording“,
-  “author“: {
-    “@type“: “Person“,
-    “name“: “Test User“,
-    “url”: “https://example.org/testuser”
+  "@context": "http://schema.org/",
+  "@type": "MusicRecording",
+  "@id": "https://example.org/music-recording",
+  "author": {
+    "@type": "Person",
+    "name": "Test User",
+    "url": "https://example.org/testuser"
   },
-  “datePublished“: “2020-01-27“,
-  “description”: “This is some audio.”
-  “duration”: “PT5M49S”,
-  “genre”: “Pop”,
-  “inPlaylist”: {
-    “@type”: “MusicPlaylist”,
-    “name”: “Becca’s Pop Playlist”
+  "datePublished": "2020-01-27",
+  "description": "This is some audio."
+  "duration": "PT5M49S",
+  "genre": "Pop",
+  "inPlaylist": {
+    "@type": "MusicPlaylist",
+    "name": "Becca’s Pop Playlist"
   },
-  “inAlbum”: {
-    “@type”: “MusicAlbum”,
-    “name”: “Album Name”,
-    “byArtist”: {
-      “@type”: “MusicGroup”,
-      “name”: “Band Name”
+  "inAlbum": {
+    "@type": "MusicAlbum",
+    "name": "Album Name",
+    "byArtist": {
+      "@type": "MusicGroup",
+      "name": "Band Name"
     }
   },
-  “mainEntityOfPage”: “https://example.org/music-recording”,
-  “name“: “Track Name“,
-  “thumbnail”: {
-    “@type”: “ImageObject”,
-    “width”: 360,
-    “height”: 480,
-    “url”: “https://example.org/music_thumbnail.png”
+  "mainEntityOfPage": "https://example.org/music-recording",
+  "name": "Track Name",
+  "thumbnail": {
+    "@type": "ImageObject",
+    "width": 360,
+    "height": 480,
+    "url": "https://example.org/music_thumbnail.png"
   } 
 }
 </script>
