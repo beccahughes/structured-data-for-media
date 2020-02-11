@@ -14,7 +14,7 @@ Media Feeds provides a way for user agents to discover such feeds and provides a
 
 ### Goals
 
--   A site should be tell the user agent it has a feed
+-   A site tells the user agent it has a feed
     
 -   A site should be able to recommend relevant content for the user. A site should be able to recommend media content to a user that is relevant to them. If the user is not logged in this can be generic.
     
